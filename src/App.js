@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Hriday
+          Learn React with Hriday in Broadridge
         </a>
       </header>
     </div>
