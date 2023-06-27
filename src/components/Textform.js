@@ -2,6 +2,12 @@ import React, {useState} from 'react'
 
 
 export default function Textform(props) {
+
+   const resetInputField=()=>{
+    console.log("clear text is clicked");
+    let newText="";
+    setText(newText)
+   }
    const handleUpclick=()=>{
     console.log("Uppercase was clicked" + text);
     let newText= text.toUpperCase();
@@ -29,7 +35,8 @@ export default function Textform(props) {
   placeholder="Type in this box." value={text} onChange={handleOnChange} cols="150" rows="8"></textarea>
            </div>
            <button className="btn btn-primary mx-2" onClick={handleUpclick}>Covert to uppercase</button>
-           <button className="btn btn-primary" onClick={handleDownclick}>Covert to lowercase</button>
+           <button className="btn btn-primary mx-2" onClick={handleDownclick}>Covert to lowercase</button>
+           <button className="btn btn-primary mx-2" onClick={resetInputField}>Clear text</button>
         </div>
         <div className="container my-3">
             <h1>Your text summary</h1>

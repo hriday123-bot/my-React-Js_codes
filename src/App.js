@@ -9,8 +9,8 @@ function App() {
     <>
     <Navbar title="Hriday" titletext="Contact details"/>
     <div className="container">
-        {/* <Textform heading="Enter the text to analyze"/> */}
-        <About/>
+        <Textform heading="Enter the text to analyze"/>
+        {/* <About/> */}
     </div>
     </>
   );
