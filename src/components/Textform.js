@@ -5,7 +5,7 @@ export default function Textform(props) {
 
    const resetInputField=()=>{
     console.log("clear text is clicked");
-    let newText="";
+    let newText=""
     setText(newText)
    }
    const handleUpclick=()=>{
@@ -23,7 +23,7 @@ export default function Textform(props) {
     setText(event.target.value)
    }
 
-    const [text, setText] = useState('Enter text here');
+    const [text, setText] = useState('');
     // text="New text" //wrong way to change the state
     // setText("Correct way")
     return (
