@@ -25,7 +25,8 @@ export default function Textform(props) {
         <div className='container'>
            <h1>{props.heading}</h1>
            <div className="mb-3">
-           <textarea  id="myBox" className="Form-control" value={text} onChange={handleOnChange} cols="150" rows="8"></textarea>
+           <textarea  id="myBox" className="Form-control" onChange="alert('You just changed the textarea.')"
+  placeholder="Type in this box." value={text} onChange={handleOnChange} cols="150" rows="8"></textarea>
            </div>
            <button className="btn btn-primary mx-2" onClick={handleUpclick}>Covert to uppercase</button>
            <button className="btn btn-primary" onClick={handleDownclick}>Covert to lowercase</button>
@@ -36,10 +37,7 @@ export default function Textform(props) {
             <p>{0.08 * text.split(" ").length} minutes read</p>
             <h2>Preview</h2>
             <p>{text}</p>
-
-
         </div>
-        
       </>
   )
 }
