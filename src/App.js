@@ -5,8 +5,7 @@ import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import About from './components/About';
 import React, {useState} from 'react';
-
-
+import { BrowserRouter as Switch, Router, Route,Link, Routes, BrowserRouter} from "react-router-dom";
 
 function App() {
 
@@ -23,12 +22,25 @@ function App() {
   
   return (
     <>
-    <Navbar title="Hriday" titletext="Contact details"/>
+    <Router>
+    <Navbar title="Hriday" titletext="About"/>
     <Alert alert={alert}/>
     <div className="container">
-        <Textform showAlert={showAlert} heading="Hey Hriday, Enter the text to analyze"/>
-        {/* <About/> */}
+      <BrowserRouter>
+       <Routes>
+
+          <Route exact path="/about" element={<About/>}/>
+      
+          <Route exact path="/" element={<Textform showAlert={showAlert} heading="Hey Hriday, Enter the text to analyze"/>}/>
+          
+       </Routes>
+      </BrowserRouter>
+        
+      <About/>
+         
+    
     </div>
+    </Router>
     </>
   );
 }
