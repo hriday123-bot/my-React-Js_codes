@@ -6,6 +6,7 @@ import Textform from './components/Textform';
 import About from './components/About';
 import React, {useState} from 'react';
 import { BrowserRouter as Switch, Router, Route,Link, Routes, BrowserRouter} from "react-router-dom";
+//import all those
 
 function App() {
 
